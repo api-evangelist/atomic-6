@@ -1,0 +1,40 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 2
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - website
+hosts:
+- host: api.atomic-6.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  types: []
+  serves:
+  - docs
+  registrable_domain: atomic-6.com
+  role: api
+  relation: own
+- host: atomic-6.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: atomic-6.com
+  role: website
+  relation: own

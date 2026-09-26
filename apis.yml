@@ -1,23 +1,71 @@
 aid: atomic-6
+
 name: Atomic-6
-description: 'Atomic-6 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Atomic-6 designs and manufactures advanced composite aerospace components, offering products such as Light Wing solar arrays, Space
+  Armor protective tiles, and Light Sheet panels. The company provides high‑performance, ITAR‑registered solutions for satellite, spacecraft,
+  and defense applications, emphasizing CMMC 2.0 compliance and AS9100 certification. Customers can request custom quotes, view detailed datasheets,
+  and purchase through the online store. Atomic-6 aims to enable reliable, lightweight structures for space and terrestrial missions.
+
 url: https://raw.githubusercontent.com/api-evangelist/atomic-6/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Aerospace
+- Composite Materials
+- Space Technology
+- Defense
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atomic-6-hosts.yml
+- type: Vendors
+  url: vendors/atomic-6-vendors.yml
+- type: DomainSecurity
+  url: security/atomic-6-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://atomic-6.com/
+- type: TermsOfService
+  url: https://atomic-6.com/terms/
+- type: PrivacyPolicy
+  url: https://atomic-6.com/privacy-policy/
+
+apis:
+- name: Atomic-6 API
+  description: API for Atomic-6 services (no public OpenAPI spec found).
+  humanURL: https://api.atomic-6.com/
+  aid: atomic-6:atomic-6-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract found at the API host (https://api.atomic-6.com/).
+  evidence:
+  - url: https://api.atomic-6.com/openapi.json
+    status: 0
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
